@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="免费域名+免费CDN, 分享技术">
+    <meta name="keywords" content="Centos7上的Apache服务器部署Let&#39;t Encrypt免费的SSL证书, 分享技术">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>免费域名+免费CDN | 风儿吹 羊儿肥的博客</title>
+    <title>Centos7上的Apache服务器部署Let&#39;t Encrypt免费的SSL证书 | 风儿吹 羊儿肥的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">免费域名+免费CDN</h1>
+                    <h1 class="description center-align post-title">Centos7上的Apache服务器部署Let&#39;t Encrypt免费的SSL证书</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/cloudflare/">
-                                <span class="chip bg-color">cloudflare</span>
-                            </a>
-                        
-                            <a href="/tags/freenom/">
-                                <span class="chip bg-color">freenom</span>
+                            <a href="/tags/ssl/">
+                                <span class="chip bg-color">ssl</span>
                             </a>
                         
                     </div>
@@ -447,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/cdn/" class="post-category">
-                                cdn
+                            <a href="/categories/linux/" class="post-category">
+                                linux
                             </a>
                         
                     </div>
@@ -481,33 +477,96 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>cdn是啥？</p>
-<p>“内容分发网络（英语：Content Delivery Network或Content Distribution Network，缩写：CDN）是指一种透过互联网互相连接的电脑网络系统，利用最靠近每位用户的服务器，更快、更可靠地将音乐、图片、视频、应用程序及其他文件发送给用户，来提供高性能、可扩展性及低成本的网络内容传递给用户。” – 摘至维基 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%85%A7%E5%AE%B9%E5%82%B3%E9%81%9E%E7%B6%B2%E8%B7%AF">内容分发网络</a></p>
-<p>可以简单的理解为我们访问的是距离我们最近的源服务器的镜像，所以可以加速访问，达到一个良好的访问效果 ，另一个好处就是，可以隐藏我们源服务器真实的ip地址，因为所有的请求都是通过cdn的，不会直接访问到源服务器。</p>
-<p>免费的域名和cdn真香，不过，免费的域名不是一直免费，一般来说它都会给你使用一段时间，超过这段时间，就需要花钱买了；免费cdn在大陆访问速度并不是很好；但是如果我们只是想玩玩，其实也无所谓，域名需要付费的时候，我们再换过一个接着玩就够了。</p>
-<h2 id="免费CDN"><a href="#免费CDN" class="headerlink" title="免费CDN"></a>免费CDN</h2><p>打开<a target="_blank" rel="noopener" href="https://www.freenom.com/">Freenom</a>，国内访问速度缓慢，如果用代理的话，建议使用代理</p>
-<p><img src="/image/2021-04-08_173102.png"></p>
-<p>输入你想要的名字</p>
-<p><img src="/image/2021-04-08_173238.png"></p>
-<p>接下来花0$购买这个域名，使用期限调节为最久（one year）</p>
-<p><img src="/image/2021-04-08_190205.png"></p>
-<p>将刚获取的域名与IP进行绑定</p>
-<p><img src="/image/2021-04-08_190424.png"></p>
-<p>Manage Domain</p>
-<p><img src="/image/2021-04-08_190539.png"></p>
-<p>添加A记录</p>
-<p><img src="/image/2021-04-08_190717.png"></p>
-<p>添加A记录后，需要等待一些时间才能通过域名解析到ip地址，通常是几分钟或者更长。</p>
-<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><p><strong>A</strong>： 将域名指向一个IPv4地址</p>
-<p><strong>CNAME</strong>： 如果将域名指向一个域名，实现与被指向域名相同的访问效果，需要增加CNAME记录。</p>
-<p><strong>MX</strong>： 建立电子邮箱服务，将指向邮件服务器地址，需要设置MX记录。</p>
-<p><strong>NS</strong>： 域名解析服务器记录，如果要将子域名指定某个域名服务器来解析，需要设置NS记录</p>
-<h2 id="免费域名"><a href="#免费域名" class="headerlink" title="免费域名"></a>免费域名</h2><p>先打开<a target="_blank" rel="noopener" href="https://www.cloudflare.com/">Cloudflare</a>注册一个账号并登陆。</p>
-<p>添加需要cdn加速的站点</p>
-<p><img src="/image/2021-04-08_192029.png"></p>
-<p>选择免费的套餐</p>
-<p><img src="/image/2021-04-08_192126.png"></p>
-<p>然后从freenom中设置dns指向cloudflare的dns，之后按照cloudflare的提示完成操作即可。更多cloudflare高级的设置参见cloudflare document。</p>
+                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>“<strong>传输层安全性协议</strong>（英语：<strong>T</strong>ransport <strong>L</strong>ayer <strong>S</strong>ecurity，缩写：<strong>TLS</strong>）及其前身<strong>安全套接层</strong>（英语：<strong>S</strong>ecure <strong>S</strong>ockets <strong>L</strong>ayer，缩写：<strong>SSL</strong>）是一种<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE">安全协议</a>，目的是为<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF">互联网</a>通信提供安全及数据<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AE%8C%E6%95%B4%E6%80%A7">完整性</a>保障。<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E6%99%AF">网景</a>公司（Netscape）在1994年推出首版<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8">网页浏览器</a>－<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E6%99%AF%E9%A0%98%E8%88%AA%E5%93%A1">网景导航者</a>时，推出<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/HTTPS">HTTPS</a>协议，以SSL进行加密，这是SSL的起源。<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/IETF">IETF</a>将SSL进行标准化，1999年公布TLS 1.0标准文件（<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc2246">RFC 2246</a>）。随后又公布TLS 1.1（<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc4346">RFC 4346</a>，2006年）、TLS 1.2（<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc5246">RFC 5246</a>，2008年）和TLS 1.3（<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc8446">RFC 8446</a>，2018年）。在<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%80%8F%E8%A6%BD%E5%99%A8">浏览器</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%9B%BB%E5%AD%90%E9%83%B5%E4%BB%B6">电子邮件</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E9%80%9A%E8%A8%8A">即时通信</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/VoIP">VoIP</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E7%B5%A1%E5%82%B3%E7%9C%9F">网络传真</a>等应用程序中，广泛使用这个协议。许多网站，如<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Google">Google</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Facebook">Facebook</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Wikipedia">Wikipedia</a>等也以这个协议来创建安全连线，发送资料。目前已成为<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91">互联网</a>上保密通信的工业标准。</p>
+<p>SSL包含记录层（Record Layer）和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E5%B1%82">传输层</a>，记录层协议确定传输层数据的封装格式。传输层安全协议使用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/X.509">X.509</a>认证，之后利用非对称加密演算来对通信方做身份认证，之后交换对称密钥作为会谈密钥（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Session_key">Session key</a>）。这个会谈密钥是用来将通信两方交换的资料做加密，保证两个应用间通信的保密性和可靠性，使客户与服务器应用之间的通信不被攻击者窃听。” –摘至 维基<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%82%B3%E8%BC%B8%E5%B1%A4%E5%AE%89%E5%85%A8%E6%80%A7%E5%8D%94%E5%AE%9A">传输层安全性协议</a></p>
+<h2 id="安装certbot与配置防火墙"><a href="#安装certbot与配置防火墙" class="headerlink" title="安装certbot与配置防火墙"></a>安装certbot与配置防火墙</h2><pre class=" language-shell"><code class="language-shell">#安装软件和配置防火墙时，都需要root权限
+#开启epel源
+yum install epel-release
+
+#安装必要的软件
+yum install mod_ssl certbot-apache
+
+#防火墙设置规则,给80(http)和443(https)端口放行
+firewall-cmd --add-service=http
+firewall-cmd --add-service=https
+
+#查看apache服务器的状态
+systemctl status httpd
+
+#如果apache没有启动，通过下面的指令启动
+systemctl start httpd
+</code></pre>
+<p><strong>Certbot</strong>是一个部署Let’s Encrypt证书的客户端, 而Let’s Encrypt可为安全网站提供免费的传输层安全性协议证书。Certbot能够自动的在Web服务器上部署从Let’s Encrypt获取的证书，非常简单易用。</p>
+<h2 id="安装SSL证书"><a href="#安装SSL证书" class="headerlink" title="安装SSL证书"></a>安装SSL证书</h2><p>生成ssl证书指令</p>
+<pre class=" language-shell"><code class="language-shell">#www.example.com你自己的三级域名
+#example@gmail.com 你的邮箱地址
+certbot certonly --webroot -w /var/www/html -d www.example.com --agree-tos --email example@gmail.com
+</code></pre>
+<p>email地址是用来接收密钥的恢复和通知</p>
+<p>安装成功后会提示</p>
+<pre class=" language-shell"><code class="language-shell">IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at
+   /etc/letsencrypt/live/example.com/fullchain.pem. Your cert
+   will expire on 2016-04-21. To obtain a new version of the
+   certificate in the future, simply run Let's Encrypt again.
+ - If you lose your account credentials, you can recover through
+   e-mails sent to user@example.com.
+ - Your account credentials have been saved in your Let's Encrypt
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Let's
+   Encrypt so making regular backups of this folder is ideal.
+ - If you like Let's Encrypt, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+</code></pre>
+<p>生成出来的证书文件存放于 <code>/etc/letsencrypt/live</code> 目录.</p>
+<h2 id="配置Apache-SSL"><a href="#配置Apache-SSL" class="headerlink" title="配置Apache SSL"></a>配置Apache SSL</h2><p>修改ssl.conf文件</p>
+<pre class=" language-shell"><code class="language-shell">vi /etc/httpd/conf.d/ssl.conf
+</code></pre>
+<p>找到<code>SSLProtocol</code>和<code>SSLCipherSuite</code>这两个参数将它们删除或者注释掉</p>
+<pre class=" language-shell"><code class="language-shell">. . .
+# SSLProtocol all -SSLv2
+. . .
+# SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5:!SEED:!IDEA
+</code></pre>
+<p>接下来把下面的代码加在<code>VirtualHost</code>区域外面,需要注意的是注释掉 <code>SSLSessionTickets</code></p>
+<pre class=" language-shell"><code class="language-shell">    . . .
+</VirtualHost>
+. . .
+
+# Begin copied text
+# from https://cipherli.st/
+# and https://raymii.org/s/tutorials/Strong_SSL_Security_On_Apache2.html
+
+SSLCipherSuite EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH
+SSLProtocol All -SSLv2 -SSLv3
+SSLHonorCipherOrder On
+# Disable preloading HSTS for now.  You can use the commented out header line that includes
+# the "preload" directive if you understand the implications.
+#Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains; preload"
+Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains"
+Header always set X-Frame-Options DENY
+Header always set X-Content-Type-Options nosniff
+# Requires Apache >= 2.4
+SSLCompression off
+SSLUseStapling on
+SSLStaplingCache "shmcb:logs/stapling-cache(150000)"
+# Requires Apache >= 2.4.11
+# SSLSessionTickets Off
+</code></pre>
+<p>保存退出后检查一下语法是否正确</p>
+<pre class=" language-shell"><code class="language-shell">apachectl configtest
+</code></pre>
+<p>如果得到<code>Syntax OK</code>的提示说说明配置正确,这时候需要重启一下apache</p>
+<pre class=" language-shell"><code class="language-shell">systemctl restart httpd
+</code></pre>
+<h2 id="检查证书状态"><a href="#检查证书状态" class="headerlink" title="检查证书状态"></a>检查证书状态</h2><p>在<strong>浏览器</strong>中打开链接</p>
+<pre class=" language-shell"><code class="language-shell"># www.example.com你的三级域名
+https://www.ssllabs.com/ssltest/analyze.html?d=www.example.com&latest
+</code></pre>
+<p><img src="/image/2021-04-08_210535.png"></p>
 
                 
             </div>
@@ -534,7 +593,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.ljpc.ga/2021/04/08/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D-%E5%85%8D%E8%B4%B9CDN/">https://www.ljpc.ga/2021/04/08/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D-%E5%85%8D%E8%B4%B9CDN/</a>
+                    <a href="https://www.ljpc.ga/2021/04/08/Centos7%E4%B8%8A%E7%9A%84Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2Let-t-Encrypt%E5%85%8D%E8%B4%B9%E7%9A%84SSL%E8%AF%81%E4%B9%A6/">https://www.ljpc.ga/2021/04/08/Centos7%E4%B8%8A%E7%9A%84Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2Let-t-Encrypt%E5%85%8D%E8%B4%B9%E7%9A%84SSL%E8%AF%81%E4%B9%A6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -572,12 +631,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/cloudflare/">
-                                    <span class="chip bg-color">cloudflare</span>
-                                </a>
-                            
-                                <a href="/tags/freenom/">
-                                    <span class="chip bg-color">freenom</span>
+                                <a href="/tags/ssl/">
+                                    <span class="chip bg-color">ssl</span>
                                 </a>
                             
                         </div>
@@ -749,9 +804,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/08/Centos7%E4%B8%8A%E7%9A%84Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2Let-t-Encrypt%E5%85%8D%E8%B4%B9%E7%9A%84SSL%E8%AF%81%E4%B9%A6/">
                     <div class="card-image">
@@ -760,55 +816,6 @@
                         <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Centos7上的Apache服务器部署Let&#39;t Encrypt免费的SSL证书">
                         
                         <span class="card-title">Centos7上的Apache服务器部署Let&#39;t Encrypt免费的SSL证书</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-08
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/linux/" class="post-category">
-                                    linux
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/ssl/">
-                        <span class="chip bg-color">ssl</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/04/08/Centos7%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%BD%B1%E8%A7%86%E7%BD%91%E7%AB%99/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Centos7下搭建影视网站">
-                        
-                        <span class="card-title">Centos7下搭建影视网站</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -833,11 +840,65 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/cms/">
-                        <span class="chip bg-color">cms</span>
+                    <a href="/tags/ssl/">
+                        <span class="chip bg-color">ssl</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/08/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D-%E5%85%8D%E8%B4%B9CDN/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="免费域名+免费CDN">
+                        
+                        <span class="card-title">免费域名+免费CDN</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/cdn/" class="post-category">
+                                    cdn
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/cloudflare/">
+                        <span class="chip bg-color">cloudflare</span>
+                    </a>
+                    
+                    <a href="/tags/freenom/">
+                        <span class="chip bg-color">freenom</span>
                     </a>
                     
                 </div>

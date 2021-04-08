@@ -4,12 +4,45 @@
   
     
     <entry>
+      <title>免费域名+免费CDN</title>
+      <link href="2021/04/08/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D-%E5%85%8D%E8%B4%B9CDN/"/>
+      <url>2021/04/08/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D-%E5%85%8D%E8%B4%B9CDN/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>cdn是啥？</p><p>“内容分发网络（英语：Content Delivery Network或Content Distribution Network，缩写：CDN）是指一种透过互联网互相连接的电脑网络系统，利用最靠近每位用户的服务器，更快、更可靠地将音乐、图片、视频、应用程序及其他文件发送给用户，来提供高性能、可扩展性及低成本的网络内容传递给用户。” – 摘至维基 <a href="https://zh.wikipedia.org/wiki/%E5%85%A7%E5%AE%B9%E5%82%B3%E9%81%9E%E7%B6%B2%E8%B7%AF">内容分发网络</a></p><p>可以简单的理解为我们访问的是距离我们最近的源服务器的镜像，所以可以加速访问，达到一个良好的访问效果 ，另一个好处就是，可以隐藏我们源服务器真实的ip地址，因为所有的请求都是通过cdn的，不会直接访问到源服务器。</p><p>免费的域名和cdn真香，不过，免费的域名不是一直免费，一般来说它都会给你使用一段时间，超过这段时间，就需要花钱买了；免费cdn在大陆访问速度并不是很好；但是如果我们只是想玩玩，其实也无所谓，域名需要付费的时候，我们再换过一个接着玩就够了。</p><h2 id="免费CDN"><a href="#免费CDN" class="headerlink" title="免费CDN"></a>免费CDN</h2><p>打开<a href="https://www.freenom.com/">Freenom</a>，国内访问速度缓慢，如果用代理的话，建议使用代理</p><p><img src="/image/2021-04-08_173102.png"></p><p>输入你想要的名字</p><p><img src="/image/2021-04-08_173238.png"></p><p>接下来花0$购买这个域名，使用期限调节为最久（one year）</p><p><img src="/image/2021-04-08_190205.png"></p><p>将刚获取的域名与IP进行绑定</p><p><img src="/image/2021-04-08_190424.png"></p><p>Manage Domain</p><p><img src="/image/2021-04-08_190539.png"></p><p>添加A记录</p><p><img src="/image/2021-04-08_190717.png"></p><p>添加A记录后，需要等待一些时间才能通过域名解析到ip地址，通常是几分钟或者更长。</p><h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><p><strong>A</strong>： 将域名指向一个IPv4地址</p><p><strong>CNAME</strong>： 如果将域名指向一个域名，实现与被指向域名相同的访问效果，需要增加CNAME记录。</p><p><strong>MX</strong>： 建立电子邮箱服务，将指向邮件服务器地址，需要设置MX记录。</p><p><strong>NS</strong>： 域名解析服务器记录，如果要将子域名指定某个域名服务器来解析，需要设置NS记录</p><h2 id="免费域名"><a href="#免费域名" class="headerlink" title="免费域名"></a>免费域名</h2><p>先打开<a href="https://www.cloudflare.com/">Cloudflare</a>注册一个账号并登陆。</p><p>添加需要cdn加速的站点</p><p><img src="/image/2021-04-08_192029.png"></p><p>选择免费的套餐</p><p><img src="/image/2021-04-08_192126.png"></p><p>然后从freenom中设置dns指向cloudflare的dns，之后按照cloudflare的提示完成操作即可。更多cloudflare高级的设置参见cloudflare document。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> cdn </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cloudflare </tag>
+            
+            <tag> freenom </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Centos7下搭建影视网站</title>
       <link href="2021/04/08/Centos7%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%BD%B1%E8%A7%86%E7%BD%91%E7%AB%99/"/>
       <url>2021/04/08/Centos7%E4%B8%8B%E6%90%AD%E5%BB%BA%E5%BD%B1%E8%A7%86%E7%BD%91%E7%AB%99/</url>
       
         <content type="html"><![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>有没有小伙伴为想看一些电影、动漫等一些视频但是没有找到而挠头烦恼呢？虽然找到了，但是需要充值VIP会员呢？俺就是想看部电影，打发打发时间而已，花几十块钱充值一个会员着实划不来….  </p><p>不让看，就自己搭建一个影视网站，想看什么看什么，同时可以分享给有同样烦恼的人，再者也可以锻炼一下自己的技术，开拓自己的视野，一举多得。  </p><h3 id="购买云服务器"><a href="#购买云服务器" class="headerlink" title="购买云服务器"></a>购买云服务器</h3><p>首先，我们需要购买一台虚拟云服务器，作为影视网站的容器 ；我们可以把云主机大致分为两类：1.国内  2.国外；</p><h4 id="国内的云主机"><a href="#国内的云主机" class="headerlink" title="国内的云主机"></a>国内的云主机</h4><p>优点：</p><ul><li>国内用户访问的速度更快一些，ping值一般来说会比较小</li><li>服务本地化</li></ul><p>缺点</p><ul><li>必须备案：通常来说，备案过程是比较繁琐的且漫长的，一般要几周到几个月时间才能备案成功，而且某些类型的网站需要提供的资料很难获取，导致备案成功率不高</li><li>价钱上：可能更高一些。</li><li>服务参差不齐：因为虚拟主机门槛低，所以服务商鱼龙混杂，如果要选则国内的云主机的话，建议选择大公司的。</li></ul><h4 id="国外的云主机"><a href="#国外的云主机" class="headerlink" title="国外的云主机"></a>国外的云主机</h4><p>优点：</p><ul><li>价格便宜，服务稳定（对学生党来说很好）</li><li>不需要备案（选择国外云主机主要的原因）</li></ul><p>缺点：</p><ul><li>容易被封</li><li>地域性访问速度较慢，延迟有时候会很大</li></ul><h4 id="云服务器商的选择"><a href="#云服务器商的选择" class="headerlink" title="云服务器商的选择"></a>云服务器商的选择</h4><p>介绍一下我曾经使用过且认为比较好的云主机</p><p><strong>virmach</strong> ：稳定且便宜，2014年成立的VPS服务商，自从成立以来一直走低价路线，提供基于KVM及OpenVZ架构的VPS，数据中心位于洛杉矶、圣何塞等地区，除了VPS以外，也提供独立服务器、游戏服务器及虚拟主机业务，其中最让广大网友乐道的是他家提供的各种便宜且稳定的VPS，尤其在黑色星期五及网络星期一等促销活动时，推出了一系列非常便宜的VPS更是让大家疯狂抢购，比如4核CPU 8G内存40G SSD 1T流量的KVM架构VPS年付只要24美元。不过，在购买的时候，需要选择延迟小的机房的云主机；我曾经就是因为随便选择，后来相当后悔，卡的一匹。</p><p><img src="/image/2021-04-08_151730.png"></p><p><strong>pacificrack</strong>：2007 年成立的美国 VPS 主机商，2009 年被 quadranet 收购，在 2019 年 11 月又重新开始独自运作。主要销售  VPS，包括便宜 vps、KVM SSD vps、站群 vps、云主机。一般来说，过节的时候都会推出一些优惠的套餐，个人觉得用起来比较好。</p><p><img src="/image/2021-04-08_152542.png"></p><p><strong>vultr</strong>：成立于2014年，美国商家，实力很强大，拥有众多机房，有美国洛杉矶、西雅图、硅谷、日本东京，英国伦敦，德国法兰克福、新加坡等全球17个数据中心/机房。特点就是按小时计费，没有付款周期的限制，用多少就付多少，不想继续使用了，直接删除VPS  就可以了，使用起来比较方便，价钱稍高。</p><p><img src="/image/2021-04-08_153557.png"></p><p>购买教程：<a href="https://zhuanlan.zhihu.com/p/108960575">以pacificrack为例，购买成功后，通过ssh工具登入云主机</a>，但是注意，这次我们选择的是Centos7</p><h3 id="LAMP环境的搭建"><a href="#LAMP环境的搭建" class="headerlink" title="LAMP环境的搭建"></a>LAMP环境的搭建</h3><p>可以参看教程 <a href="https://www.ljpc.ga/2021/04/08/Centos7%E4%B8%8B%E6%9E%84%E5%BB%BAlamp%E7%8E%AF%E5%A2%83/">Centos7下构建lamp环境</a></p><h3 id="安装cms系统"><a href="#安装cms系统" class="headerlink" title="安装cms系统"></a>安装cms系统</h3><p>cms产品众多，俺选择苹果cms来搭建影视网站，功能强大，且适合用来做视频网站；苹果cmsv10下载地址 <a href="https://cdn.jsdelivr.net/gh/magicblack/maccms_down@master/maccms10.zip%EF%BC%8C%E7%84%B6%E5%90%8E%E5%B0%86%E4%B8%8B%E8%BD%BD%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%8C%85%E6%94%BE%E5%9C%A8centos7">https://cdn.jsdelivr.net/gh/magicblack/maccms_down@master/maccms10.zip，然后将下载的压缩包放在centos7</a> 的/var/www/html 目录下</p><pre class=" language-shell"><code class="language-shell">#切换到/var/www/html目录cd /var/www/html#安装unzip工具yum install unzip#通过unzip解压unzip maccms10.zip#重新启动apache服务器systemctl restart httpd#授予文件读写权限chmod  -R 777 *</code></pre><p>通过浏览器访问 – &gt; 你的ip:80，出现如下内容</p><p><img src="/image/2021-04-08_162457.png"></p><p>一直下一步，来到如下</p><p><img src="/image/2021-04-08_162621.png"></p><pre class=" language-shell"><code class="language-shell">数据名称：maccms10 (自定义)数据库账号：root数据库密码：123456 (之前安装数据库后设置的密码)管理员账号：root (自定义)密码：123456 (自定义)</code></pre><p>测试数据库连接，立即执行安装，根据提示，将admin.php 修改成 hello.php（自定义）</p><pre class=" language-shell"><code class="language-shell">mv admin.php hello.php</code></pre><p>浏览器输入<a href="http://139.180.159.231/hello.php%EF%BC%8C%E7%99%BB%E5%85%A5%E5%90%8E%E5%8F%B0%EF%BC%9B%E4%B9%8B%E5%90%8E%E9%9C%80%E8%A6%81%E9%87%87%E9%9B%86%E8%B5%84%E6%BA%90%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%9F%A5%E7%9C%8B%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%EF%BC%88https://www.showdoc.com.cn/mytheme?page_id=2779989134071820%EF%BC%89">http://139.180.159.231/hello.php，登入后台；之后需要采集资源，可以查看官方文档（https://www.showdoc.com.cn/mytheme?page_id=2779989134071820）</a></p><p>不同的模板，会有不同的显示效果，比如说我的站点就如下图所示，大功告成！是不是小有成就！</p><p><img src="/image/2021-04-08_163455.png"></p>]]></content>
       
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
       
       
         <tags>
@@ -30,10 +63,16 @@
         <content type="html"><![CDATA[<h3 id="临时关闭selinux"><a href="#临时关闭selinux" class="headerlink" title="临时关闭selinux"></a>临时关闭selinux</h3><pre class=" language-shell"><code class="language-shell">#查看selinux是否开启getenforce#关闭selinuxsetenforce 0</code></pre><h3 id="安装Apache"><a href="#安装Apache" class="headerlink" title="安装Apache"></a>安装Apache</h3><pre class=" language-sh"><code class="language-sh">#输入y，同意安装yum install httpd #启动 apachesystemctl start httpd.service #设置apache开机启动systemctl enable httpd.service </code></pre><h3 id="修改防火墙规则"><a href="#修改防火墙规则" class="headerlink" title="修改防火墙规则"></a>修改防火墙规则</h3><pre class=" language-shell"><code class="language-shell">#允许外界访问80端口firewall-cmd --add-port=80/tcp</code></pre><h3 id="安装MariaDB"><a href="#安装MariaDB" class="headerlink" title="安装MariaDB"></a>安装MariaDB</h3><pre class=" language-shell"><code class="language-shell">#输入y同意安装yum install mariadb mariadb-server#启动MariaDBsystemctl start mariadb.service #设置开机启动systemctl enable mariadb.service </code></pre><h3 id="修改MySQL密码"><a href="#修改MySQL密码" class="headerlink" title="修改MySQL密码"></a>修改MySQL密码</h3><pre class=" language-shell"><code class="language-shell">#通过mysql，连接数据库mysql#切换数据库use mysql;#修改mysql密码set password for 'root'@'localhost'=password('输入你的密码');#如果需要mysql授权远程连接，请使用如下命令授予权限grant all on *.* to root identified by 'root';#关闭数据库连接exit</code></pre><h3 id="安装PHP以及组件"><a href="#安装PHP以及组件" class="headerlink" title="安装PHP以及组件"></a>安装PHP以及组件</h3><pre class=" language-shell"><code class="language-shell">#默认的yum源无法升级PHP，并且通过默认的yum源安装的是低版本的php；我们需要安装其他高版本的php时，需要添加第三方yum源rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpmrpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm#安装php7.1，提示输入y确认安装yum install -y php71w-fpm php71w-opcache php71w-cli php71w-gd php71w-imap php71w-mysqlnd php71w-mbstring php71w-mcrypt php71w-pdo php71w-pecl-apcu php71w-pecl-mongodb php71w-pecl-redis php71w-pgsql php71w-xml php71w-xmlrpc php71w-devel mod_php71w#查看当前php版本php -v</code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> lamp </tag>
             
         </tags>
       

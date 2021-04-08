@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Centos7上的Apache服务器部署Let&#39;t Encrypt免费的SSL证书, 分享技术">
+    <meta name="keywords" content="人性误判心理学, 分享技术">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Centos7上的Apache服务器部署Let&#39;t Encrypt免费的SSL证书 | 风儿吹 羊儿肥的博客</title>
+    <title>人性误判心理学 | 风儿吹 羊儿肥的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Centos7上的Apache服务器部署Let&#39;t Encrypt免费的SSL证书</h1>
+                    <h1 class="description center-align post-title">人性误判心理学</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ssl/">
-                                <span class="chip bg-color">ssl</span>
+                            <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/">
+                                <span class="chip bg-color">心理学</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/linux/" class="post-category">
-                                linux
+                            <a href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6/" class="post-category">
+                                心理学
                             </a>
                         
                     </div>
@@ -477,97 +477,298 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>“<strong>传输层安全性协议</strong>（英语：<strong>T</strong>ransport <strong>L</strong>ayer <strong>S</strong>ecurity，缩写：<strong>TLS</strong>）及其前身<strong>安全套接层</strong>（英语：<strong>S</strong>ecure <strong>S</strong>ockets <strong>L</strong>ayer，缩写：<strong>SSL</strong>）是一种<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE">安全协议</a>，目的是为<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF">互联网</a>通信提供安全及数据<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AE%8C%E6%95%B4%E6%80%A7">完整性</a>保障。<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E6%99%AF">网景</a>公司（Netscape）在1994年推出首版<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8">网页浏览器</a>－<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E6%99%AF%E9%A0%98%E8%88%AA%E5%93%A1">网景导航者</a>时，推出<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/HTTPS">HTTPS</a>协议，以SSL进行加密，这是SSL的起源。<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/IETF">IETF</a>将SSL进行标准化，1999年公布TLS 1.0标准文件（<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc2246">RFC 2246</a>）。随后又公布TLS 1.1（<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc4346">RFC 4346</a>，2006年）、TLS 1.2（<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc5246">RFC 5246</a>，2008年）和TLS 1.3（<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc8446">RFC 8446</a>，2018年）。在<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%80%8F%E8%A6%BD%E5%99%A8">浏览器</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%9B%BB%E5%AD%90%E9%83%B5%E4%BB%B6">电子邮件</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E9%80%9A%E8%A8%8A">即时通信</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/VoIP">VoIP</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E7%B5%A1%E5%82%B3%E7%9C%9F">网络传真</a>等应用程序中，广泛使用这个协议。许多网站，如<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Google">Google</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Facebook">Facebook</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Wikipedia">Wikipedia</a>等也以这个协议来创建安全连线，发送资料。目前已成为<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91">互联网</a>上保密通信的工业标准。</p>
-<p>SSL包含记录层（Record Layer）和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E5%B1%82">传输层</a>，记录层协议确定传输层数据的封装格式。传输层安全协议使用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/X.509">X.509</a>认证，之后利用非对称加密演算来对通信方做身份认证，之后交换对称密钥作为会谈密钥（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Session_key">Session key</a>）。这个会谈密钥是用来将通信两方交换的资料做加密，保证两个应用间通信的保密性和可靠性，使客户与服务器应用之间的通信不被攻击者窃听。” –摘至 维基<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%82%B3%E8%BC%B8%E5%B1%A4%E5%AE%89%E5%85%A8%E6%80%A7%E5%8D%94%E5%AE%9A">传输层安全性协议</a></p>
-<h2 id="安装certbot与配置防火墙"><a href="#安装certbot与配置防火墙" class="headerlink" title="安装certbot与配置防火墙"></a>安装certbot与配置防火墙</h2><pre class=" language-shell"><code class="language-shell">#安装软件和配置防火墙时，都需要root权限
-#开启epel源
-yum install epel-release
-
-#安装必要的软件
-yum install mod_ssl certbot-apache
-
-#防火墙设置规则,给80(http)和443(https)端口放行
-firewall-cmd --add-service=http
-firewall-cmd --add-service=https
-
-#查看apache服务器的状态
-systemctl status httpd
-
-#如果apache没有启动，通过下面的指令启动
-systemctl start httpd
-</code></pre>
-<p><strong>Certbot</strong>是一个部署Let’s Encrypt证书的客户端, 而Let’s Encrypt可为安全网站提供免费的传输层安全性协议证书。Certbot能够自动的在Web服务器上部署从Let’s Encrypt获取的证书，非常简单易用。</p>
-<h2 id="安装SSL证书"><a href="#安装SSL证书" class="headerlink" title="安装SSL证书"></a>安装SSL证书</h2><p>生成ssl证书指令</p>
-<pre class=" language-shell"><code class="language-shell">#www.example.com你自己的三级域名
-#example@gmail.com 你的邮箱地址
-certbot certonly --webroot -w /var/www/html -d www.example.com --agree-tos --email example@gmail.com
-</code></pre>
-<p>email地址是用来接收密钥的恢复和通知</p>
-<p>安装成功后会提示</p>
-<pre class=" language-shell"><code class="language-shell">IMPORTANT NOTES:
- - Congratulations! Your certificate and chain have been saved at
-   /etc/letsencrypt/live/example.com/fullchain.pem. Your cert
-   will expire on 2016-04-21. To obtain a new version of the
-   certificate in the future, simply run Let's Encrypt again.
- - If you lose your account credentials, you can recover through
-   e-mails sent to user@example.com.
- - Your account credentials have been saved in your Let's Encrypt
-   configuration directory at /etc/letsencrypt. You should make a
-   secure backup of this folder now. This configuration directory will
-   also contain certificates and private keys obtained by Let's
-   Encrypt so making regular backups of this folder is ideal.
- - If you like Let's Encrypt, please consider supporting our work by:
-
-   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
-   Donating to EFF:                    https://eff.org/donate-le
-</code></pre>
-<p>生成出来的证书文件存放于 <code>/etc/letsencrypt/live</code> 目录.</p>
-<h2 id="配置Apache-SSL"><a href="#配置Apache-SSL" class="headerlink" title="配置Apache SSL"></a>配置Apache SSL</h2><p>修改ssl.conf文件</p>
-<pre class=" language-shell"><code class="language-shell">vi /etc/httpd/conf.d/ssl.conf
-</code></pre>
-<p>找到<code>SSLProtocol</code>和<code>SSLCipherSuite</code>这两个参数将它们删除或者注释掉</p>
-<pre class=" language-shell"><code class="language-shell">. . .
-# SSLProtocol all -SSLv2
-. . .
-# SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5:!SEED:!IDEA
-</code></pre>
-<p>接下来把下面的代码加在<code>VirtualHost</code>区域外面,需要注意的是注释掉 <code>SSLSessionTickets</code></p>
-<pre class=" language-shell"><code class="language-shell">    . . .
-</VirtualHost>
-. . .
-
-# Begin copied text
-# from https://cipherli.st/
-# and https://raymii.org/s/tutorials/Strong_SSL_Security_On_Apache2.html
-
-SSLCipherSuite EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH
-SSLProtocol All -SSLv2 -SSLv3
-SSLHonorCipherOrder On
-# Disable preloading HSTS for now.  You can use the commented out header line that includes
-# the "preload" directive if you understand the implications.
-#Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains; preload"
-Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains"
-Header always set X-Frame-Options DENY
-Header always set X-Content-Type-Options nosniff
-# Requires Apache >= 2.4
-SSLCompression off
-SSLUseStapling on
-SSLStaplingCache "shmcb:logs/stapling-cache(150000)"
-# Requires Apache >= 2.4.11
-# SSLSessionTickets Off
-</code></pre>
-<p>保存退出后检查一下语法是否正确</p>
-<pre class=" language-shell"><code class="language-shell">apachectl configtest
-</code></pre>
-<p>如果得到<code>Syntax OK</code>的提示说说明配置正确,这时候需要重启一下apache</p>
-<pre class=" language-shell"><code class="language-shell">systemctl restart httpd
-</code></pre>
-<h2 id="检查证书状态"><a href="#检查证书状态" class="headerlink" title="检查证书状态"></a>检查证书状态</h2><p>在<strong>浏览器</strong>中打开链接</p>
-<pre class=" language-shell"><code class="language-shell"># www.example.com你的三级域名
-https://www.ssllabs.com/ssltest/analyze.html?d=www.example.com&latest
-</code></pre>
-<p><img src="/image/2021-04-08_210535.png"></p>
-
+                <h2 id="人类误判心理学"><a href="#人类误判心理学" class="headerlink" title="人类误判心理学"></a>人类误判心理学</h2><p><strong>社会心理理学的重要原理理</strong>:认知往往取决于情景，所以不同的情景通常会引起不同的结论，哪怕是同⼀个⼈在思考同⼀个问题的时候也是如此。</p>
+<h2 id="倾向"><a href="#倾向" class="headerlink" title="倾向"></a><strong>倾向</strong></h2><blockquote>
+<ol>
+<li>奖励和惩罚超级倾向</li>
+<li>喜欢/热爱倾向</li>
+<li>讨厌/憎恨倾向</li>
+<li>避免怀疑倾向</li>
+<li>避免不一致性倾向</li>
+<li>好奇心倾向</li>
+<li>康德式公平倾向</li>
+<li>艳羡/嫉妒倾向</li>
+<li>回馈倾向</li>
+<li>受简单联想影响的倾向</li>
+<li>简单的、避免痛苦的心理否认</li>
+<li>自视过高的倾向</li>
+<li>过度乐观倾向</li>
+<li>被剥夺超级反应倾向</li>
+<li>社会认同倾向</li>
+<li>对比错误反应倾向</li>
+<li>压力影响倾向</li>
+<li>错误衡量易得性倾向</li>
+<li>不用就忘倾向</li>
+<li>化学物质错误影响倾向</li>
+<li>衰老-错误影响倾向</li>
+<li>权威-错误影响倾向</li>
+<li>废话倾向</li>
+<li>重视理由倾向</li>
+<li>lollapalooza 倾向–数数心理倾向共同作用造成极端后果的倾向</li>
+</ol>
+</blockquote>
+<h2 id="奖励和惩罚超级倾向"><a href="#奖励和惩罚超级倾向" class="headerlink" title="奖励和惩罚超级倾向"></a>奖励和惩罚超级倾向</h2><p><strong>奖励</strong>：激励机制，激励引起偏见</p>
+<blockquote>
+<p>怀疑或者保留地接受专业顾问的建议</p>
+<ol>
+<li>如果顾问提出的专业建议对他自身特别有利，你就应该特别害怕这些建议</li>
+<li>在和顾问打交道时，学习和使用你的顾问所在行业的基本知识</li>
+<li>复核、质疑或者更换你等到的建议，除非经过客观考虑之后这些建看开起来是合适的</li>
+</ol>
+</blockquote>
+<ul>
+<li>正向激励：</li>
+<li>反向激励：激励机制能够导致人们在做坏事的时候觉得自己是正当的</li>
+</ul>
+<p><strong>惩罚</strong>：也强烈影响到行为和认知，它的弹性和效果不比奖励好</p>
+<p>富兰克林：“你想说服别人，要诉诸利益，而非诉诸理性”</p>
+<p>及时的奖励产生的效果高于延后的奖励的效果</p>
+<p>利益使人昏</p>
+<p>虽然在各种奖励中金钱是最重要的，但它并非唯一的奖励。人们也会为了<strong>性、友谊、伴侣、更高的地位和其他非金钱因素</strong>而改变他们的行为和认知</p>
+<p>祖母的规矩就是要求孩子在吃甜点前先把他们的胡萝卜吃掉</p>
+<h2 id="喜欢-热爱倾向"><a href="#喜欢-热爱倾向" class="headerlink" title="喜欢/热爱倾向"></a>喜欢/热爱倾向</h2><p><strong>喜爱/热爱</strong>：</p>
+<blockquote>
+<p>现实意义的后果</p>
+<ol>
+<li>忽略其热爱对象的缺点，对其百依百顺</li>
+<li>偏爱哪些能够让自己联想起热爱对象的人、物品和行为</li>
+<li>为了爱而扭曲其他事实</li>
+</ol>
+</blockquote>
+<p>一般来讲，人类终生都会<strong>渴望得到许多和他毫无关系的他人的怜惜（理解）和欣赏（认同）</strong></p>
+<p>刚出生的人会”天生喜欢“对他好的人</p>
+<h2 id="讨厌-憎恨倾向"><a href="#讨厌-憎恨倾向" class="headerlink" title="讨厌/憎恨倾向"></a>讨厌/憎恨倾向</h2><p><strong>讨厌/憎恨</strong>：</p>
+<blockquote>
+<p>影响</p>
+<ol>
+<li>忽略其讨厌对象的优点</li>
+<li>讨厌那些能够让自己联想起讨厌对象的人、物品和行动</li>
+<li>为了仇恨而扭曲其他事实</li>
+</ol>
+</blockquote>
+<p>刚出生的人也会”天生就讨厌和憎恨“对他很坏的人</p>
+<h2 id="避免怀疑倾向"><a href="#避免怀疑倾向" class="headerlink" title="避免怀疑倾向"></a>避免怀疑倾向</h2><p><strong>避免怀疑</strong>：人类的大脑天生就有一种尽快做出决定，以此消除怀疑的倾向</p>
+<blockquote>
+<p>引发的原因</p>
+<ol>
+<li>困惑</li>
+<li>压力</li>
+</ol>
+</blockquote>
+<h2 id="避免不一致性倾向"><a href="#避免不一致性倾向" class="headerlink" title="避免不一致性倾向"></a>避免不一致性倾向</h2><p><strong>避免不一致性</strong>：抵抗改变</p>
+<blockquote>
+<p>原因</p>
+<p><img src="/image/2020-04-08_173409.png"></p>
+</blockquote>
+<blockquote>
+<p>结果</p>
+<p><strong>人们在获取新身份的过程中做出的重大牺牲将会提高他们对这种新身份的忠诚度</strong></p>
+</blockquote>
+<p>由于避免不一致性倾向的存在，防止一种习惯的养成要比改变它容易得多</p>
+<p>人永远不会忘记自己做过的坏事</p>
+<p>由于避免不一致性倾向，使得一个人只要假装拥有某种身份、习惯或者结论，他自己通常就会信以为真</p>
+<blockquote>
+<p>案例1</p>
+<p>富兰克林操作别人帮自己忙、从而令别人对自己产生好感</p>
+<p>案例2</p>
+<p>许多看守会虐待囚犯，这种做法使他们更加讨厌和憎恨囚犯，而那些被当作畜生一样的囚犯又会反过来仇视看守</p>
+</blockquote>
+<h2 id="好奇心倾向"><a href="#好奇心倾向" class="headerlink" title="好奇心倾向"></a>好奇心倾向</h2><p><strong>好奇心</strong>：</p>
+<blockquote>
+<p>帮助人们防止或者减少其他心理倾向造成的糟糕后果</p>
+</blockquote>
+<p>制造好奇</p>
+<h2 id="康德式公平倾向"><a href="#康德式公平倾向" class="headerlink" title="康德式公平倾向"></a>康德式公平倾向</h2><p><strong>康德式公平</strong>：绝对命令，某种黄金法则，要求人们遵守某些行为方式，如果所有人都遵守这些方式，那么就能够保证社会制度对每一个人来说都是最好的。应该说，现代社会，每个有文化的人都表现出并期待从别人那里得到康德所定义的这种公平</p>
+<p><strong>起因</strong>：某种黄金法则或者人们遵循某些行为没有被正确处理，即没有按照行为法则行事</p>
+<p><strong>解决的方法</strong>（事件已经发生）：</p>
+<blockquote>
+<p>司机A超车，司机B允许司机A超车，因为司机B想超车时，也希望别人让他超车</p>
+</blockquote>
+<h2 id="艳羡-嫉妒倾向"><a href="#艳羡-嫉妒倾向" class="headerlink" title="艳羡/嫉妒倾向"></a>艳羡/嫉妒倾向</h2><p><strong>羡慕/妒忌</strong>：无法或者很难得到的东西被他人占有</p>
+<blockquote>
+<p>起因：</p>
+<p><img src="/image/2020-04-08_190151.png"></p>
+</blockquote>
+<blockquote>
+<p> 破解之法：</p>
+<ol>
+<li>端正心态，安慰自己别人有的东西自己不一定需要</li>
+<li>转移注意力；这个时候的我们更应该去思考他人的<strong>自视过高倾向</strong>和<strong>回馈倾向</strong></li>
+</ol>
+</blockquote>
+<blockquote>
+<p>利用：</p>
+<p>勾起他人对某些人的羡慕倾向</p>
+</blockquote>
+<h2 id="回馈倾向"><a href="#回馈倾向" class="headerlink" title="回馈倾向"></a>回馈倾向</h2><p><strong>回报</strong>：以牙还牙，以德报德</p>
+<p><img src="/image/2020-04-09_094526.png"></p>
+<blockquote>
+<p><strong>启示</strong></p>
+<p><img src="/image/2020-04-09_094828.png"></p>
+<p><em>人类更加倾向于极端</em>，以牙还牙，但是投桃报李效果也</p>
+<p><strong>化解敌意的方法</strong></p>
+<p><strong>人们可以延迟自己的反应</strong></p>
+</blockquote>
+<blockquote>
+<p>案例1</p>
+<p>例如，当汽车销售员慷慨地把你请到一个舒服的地方坐下，并端给你一杯咖啡时，你非常有可 能因为这个细小的礼节性行为当了一回冤大头，买车的时候多付了 500 美元。这远远不是销售员用小恩小惠所取得的最成功的销售案例。然而，在这个买车的场景中，你将会处于劣势，你将会从自己口袋里额外掏出 500 美元。这种潜在的损失多少会让你对销售员的示好保持警惕</p>
+<p>案例2</p>
+<p>西奥迪尼的实验员所做的是作出小小的让步，于是对方也作出了小小的让步。由于西奥迪尼</p>
+</blockquote>
+<blockquote>
+<p><strong>破解之法：</strong></p>
+<p>拒接接受他人的小恩惠</p>
+</blockquote>
+<blockquote>
+<p><strong>利用：</strong></p>
+<ol>
+<li>施小惠给他人，以达到某些目的</li>
+<li>先说出极端条件，进而做出让步</li>
+</ol>
+</blockquote>
+<h2 id="受简单联想影响的倾向"><a href="#受简单联想影响的倾向" class="headerlink" title="受简单联想影响的倾向"></a>受简单联想影响的倾向</h2><p>受简单联想影响：联想事物</p>
+<blockquote>
+<p>案例1</p>
+<p>若要避免受到对从前之成功的简单联想误导，请记住下面这段历史。拿破仑和希特勒的军队在其他地方战无不胜，于是他们决定侵略俄罗斯，结果都是一败涂地。现实生活中有许多事例跟拿破仑和希特勒的例子差不多。例 如，有个人愚蠢地去赌场赌博，竟然赢了钱。这种虚无缥缈的关联促使他反复去那个赌场，结果自然是输得一塌糊涂。也有些人把钱交给资质平庸的朋友去投资，碰巧赚了大钱。尝到甜头之后，他决定再次尝试这种曾经取得成功的方法结果很糟糕</p>
+<p>案例2</p>
+<p>受简单联想影响的倾向通常在消除以德报德的自然倾向方面有惊人的效果。有时候，当某个人接受恩惠时，他所处的境况可能很差，比如说穷困潦倒、疾病缠身、饱受欺凌等等。除此之外，受惠者可能会妒忌施惠者优越的处境，从而讨厌施惠者。在这样的情况下，由于施惠的举动让受惠者联想起自身的不幸遭遇，受惠者不但会讨厌那个帮助他的人，还会试图去伤害他。</p>
+</blockquote>
+<blockquote>
+<p>避免因为过去的成功而做蠢事的<strong>正确对策</strong>是：</p>
+<ol>
+<li>谨慎地审视以往的每次成功，找出这些成功里面的偶然因素，以免受这些因素误导，从而夸大了计划中的新行动取得成功的概率</li>
+<li>看看新的行动将会遇到哪些在以往的成功经验中没有出现的危险因素</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>利用：</p>
+<ol>
+<li>在商场，利用商品联想，提高销售量</li>
+<li>说美好的事物，使其联想到以前的成功（认可）或者做出的牺牲（理解），使其产生偏爱与好感</li>
+</ol>
+</blockquote>
+<p>富兰克林提议：“结婚前要睁大双眼看清楚，结婚后要睁一只眼闭一只眼。”也许这种“睁一只眼闭一只眼”的方法是正确的，但我喜欢一种更难做到的办法：“实事求是地看清现实，可还是去爱。”</p>
+<h2 id="简单的、避免痛苦的心理否认倾向"><a href="#简单的、避免痛苦的心理否认倾向" class="headerlink" title="简单的、避免痛苦的心理否认倾向"></a>简单的、避免痛苦的心理否认倾向</h2><p>**简单的、避免痛苦的心理否认 **：逃避痛苦，拒接接受现实</p>
+<blockquote>
+<p>案例1</p>
+<p>对化学物质的依赖通常会导致道德沦丧，成瘾的人倾向于认为他们的处境仍然很体面，仍然<br>会有体面的前途。因此，他们在越来越堕落的过程中，会表现得极其不现实，对现实进行极<br>端的否认。</p>
+</blockquote>
+<blockquote>
+<p>破解之法：</p>
+<ol>
+<li>正确认识自我，意思到现实</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>利用：</p>
+<ol>
+<li>由于该倾向容易导致对其他物品的依赖，例如：化学药物</li>
+</ol>
+</blockquote>
+<h2 id="自视过高的倾向"><a href="#自视过高的倾向" class="headerlink" title="自视过高的倾向"></a>自视过高的倾向</h2><p><strong>自视过高</strong>：错误的对自己、自己主要的“私有物品”、配偶、孩子、观点、想法、所做的事评价过高</p>
+<p><strong>禀赋效应</strong>：人们作出决定之后，就会觉得自己的决定很好，甚至比没作出这种决定之前所认为的还要好</p>
+<p>自视过高的倾向往往会使人们偏爱那些和自己相似的人</p>
+<blockquote>
+<p>化解这种“托尔斯泰效应”的对策是：</p>
+<ol>
+<li>建设一种公平的、唯才是用的、要求严格的文化，外加采用能够提升士气的人力资源管理方法</li>
+<li>开除最糟糕的不守规矩者</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>破解之法：</p>
+<ol>
+<li>强迫自己评价自己或者“私人物品”时客观</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>利用：</p>
+<ol>
+<li>该倾向反应了自己的“私有物品“喜爱，所以需要我们去赞美，以获取偏爱</li>
+<li>导致错误的判断</li>
+</ol>
+</blockquote>
+<h2 id="过度乐观倾向"><a href="#过度乐观倾向" class="headerlink" title="过度乐观倾向"></a>过度乐观倾向</h2><p>乐观</p>
+<h2 id="被剥夺超级反应倾向"><a href="#被剥夺超级反应倾向" class="headerlink" title="被剥夺超级反应倾向"></a>被剥夺超级反应倾向</h2><p>一个人从10 美元中得到的快乐的分量，并不正好等于失去 10 美元给他带来的痛苦的分量</p>
+<p>人类和芒格家的狗差不多，人们在失去或者有可能失去 财产、爱情、友谊、势力范围、机会、身份或者其他任何有价值的东西时，通常会做出不理性的激烈反应，哪怕只失去一点点时也是如此。</p>
+<blockquote>
+<p>破解之法：</p>
+<ol>
+<li>意识到这是被剥夺超级反应倾向，了解后果，防止被他人利用虚假的信息挑拨，由于避免怀疑倾向的存在，快速做出决定</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>利用：</p>
+<ol>
+<li>主要是给人带来痛苦</li>
+</ol>
+</blockquote>
+<h2 id="社会认同倾向"><a href="#社会认同倾向" class="headerlink" title="社会认同倾向"></a>社会认同倾向</h2><p><strong>社会认同</strong>：如果一个人自动依照他所观察到的周围人们的思考和行动方式去思考和行动，那么他就能够<br>把一些原本很复杂的行为进行简化。而且这种从众的做法往往是有效的（从众）</p>
+<blockquote>
+<p>困惑、压力能够加强社会认同倾向：困惑和压力导致人尽快做出决定，避免疑惑</p>
+</blockquote>
+<blockquote>
+<p>破解之法：</p>
+<ol>
+<li>静下来重新考虑</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>利用：</p>
+<ol>
+<li></li>
+</ol>
+</blockquote>
+<h2 id="对比错误反应倾向"><a href="#对比错误反应倾向" class="headerlink" title="对比错误反应倾向"></a>对比错误反应倾向</h2><p><strong>对比错误反应</strong>：因为人类的神经系统并不是精密的科学仪器，所以它必须依靠某些更为简单的东西</p>
+<blockquote>
+<p>案例1</p>
+<p>某些房地产经纪公司采用的推销方法尤其应该受到谴责。买家是外地的，也许急于把家搬到<br>这座城市，于是匆匆来到房地产经纪公司。经纪人故意先带着这位顾客看了三套条件十分糟<br>糕而且价格贵得离谱的房子，然后他又带着顾客去看一套条件一般糟糕、价格也一般贵的房<br>子。这样一来，经纪人通常很容易就能达成交易。</p>
+</blockquote>
+<h2 id="压力影响倾向"><a href="#压力影响倾向" class="headerlink" title="压力影响倾向"></a>压力影响倾向</h2><p>容易受到压力的影响</p>
+<blockquote>
+<p>在随后漫长的余生中，巴甫洛夫给许多狗施加压力，让它们的精神崩溃，然后再来修复这些<br>崩溃。所有这些他都保存了详细的实验记录。他发现：</p>
+<ol>
+<li>他能够对这些狗进行分类，然后预测具体某只狗有多么容易崩溃</li>
+<li>那些最不容易 崩溃的狗也最不容易恢复到崩溃前的状态</li>
+<li>所有狗都可以被弄崩溃 </li>
+<li>除非重新施加压力，否则他无法让崩溃的狗恢复正常</li>
+</ol>
+</blockquote>
+<h2 id="错误衡量易得性倾向"><a href="#错误衡量易得性倾向" class="headerlink" title="错误衡量易得性倾向"></a>错误衡量易得性倾向</h2><p>这种倾向和一句歌词相互呼应：“如果我爱的女孩不在身边，我就爱身边的女孩。”<strong>人类的大脑是有限和不完美的，它很容易满足于容易得到的东西</strong>。<strong>大脑无法使用它记不住或者认识不到的东西</strong>，因为它会受到一种或几种心理倾向的影响，比 如说上述歌曲中那个家伙就受到身边女孩的影响。<strong>所以人类的大脑会高估容易得到的东西的重要性，因而展现出易得性错误衡量倾向</strong></p>
+<blockquote>
+<p>避免受易得性错误衡量倾向影响的主要对策:</p>
+<ol>
+<li>按程序办事，包括使用几乎总是很有帮助的检查清单</li>
+<li>另外一种对策就是模仿达尔文那种特别重视反面证据的做法</li>
+<li>寻找并聘请一些知识渊博、富于怀疑精神、能言善辩的人，请他们扮演现有观点的反方角色</li>
+</ol>
+</blockquote>
+<h2 id="不用就忘倾向"><a href="#不用就忘倾向" class="headerlink" title="不用就忘倾向"></a>不用就忘倾向</h2><h2 id="化学物质错误影响倾向"><a href="#化学物质错误影响倾向" class="headerlink" title="化学物质错误影响倾向"></a>化学物质错误影响倾向</h2><p>化学物质错误影响</p>
+<p>##衰老-错误影响倾向</p>
+<p>年龄的增长自然会造成认知衰退，而每个人认知衰退的时间早晚和速度快慢不尽相同</p>
+<p>带着快乐不断地思考和学习在某种程度上能够延缓不可避免的衰退过程</p>
+<h2 id="权威-错误影响倾向"><a href="#权威-错误影响倾向" class="headerlink" title="权威-错误影响倾向"></a>权威-错误影响倾向</h2><blockquote>
+<p>错误地理解权威人物的吩咐有时会造成悲剧性的后果。在第二次世界大战期间，部队给某位将军安排了新的飞行员。由于将军就坐在副机长的位子上，这个新的飞行员感到特别紧张，他很想取悦这位新老板，乃至把将军在座位上挪挪身体的细微动作误解为某种让他去干傻事的命令。于是飞机坠毁了，飞行员落得了半身不遂的下场</p>
+</blockquote>
+<blockquote>
+<p>利用：</p>
+<ol>
+<li>制造权威</li>
+</ol>
+</blockquote>
+<h2 id="废话倾向"><a href="#废话倾向" class="headerlink" title="废话倾向"></a>废话倾向</h2><blockquote>
+<p>作为一种拥有语言天赋的社会动物，人类天生就有本事啰里啰唆，说出一大堆会给正在专心做正经事的人造成许多麻烦的废话。有些人会制造大量的废话，有些人则废话很少</p>
+</blockquote>
+<h2 id="重视理由倾向"><a href="#重视理由倾向" class="headerlink" title="重视理由倾向"></a>重视理由倾向</h2><blockquote>
+<p>人，尤其是生活在发达文化中的人，天生就热爱准确的认知，以及获取准确认知过程中得到的快乐</p>
+</blockquote>
+<blockquote>
+<p>利用：</p>
+<ol>
+<li>不合理的事情，给出理由，顺理成章</li>
+</ol>
+</blockquote>
+<h2 id="lollapalooza-倾向–数数心理倾向共同作用造成极端后果的倾向"><a href="#lollapalooza-倾向–数数心理倾向共同作用造成极端后果的倾向" class="headerlink" title="lollapalooza 倾向–数数心理倾向共同作用造成极端后果的倾向"></a>lollapalooza 倾向–数数心理倾向共同作用造成极端后果的倾向</h2>
                 
             </div>
             <hr/>
@@ -593,7 +794,7 @@ https://www.ssllabs.com/ssltest/analyze.html?d=www.example.com&latest
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.ljpc.ga/2021/04/08/Centos7%E4%B8%8A%E7%9A%84Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2Let-t-Encrypt%E5%85%8D%E8%B4%B9%E7%9A%84SSL%E8%AF%81%E4%B9%A6/">https://www.ljpc.ga/2021/04/08/Centos7%E4%B8%8A%E7%9A%84Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2Let-t-Encrypt%E5%85%8D%E8%B4%B9%E7%9A%84SSL%E8%AF%81%E4%B9%A6/</a>
+                    <a href="https://www.ljpc.ga/2021/04/08/%E4%BA%BA%E6%80%A7%E8%AF%AF%E5%88%A4%E5%BF%83%E7%90%86%E5%AD%A6/">https://www.ljpc.ga/2021/04/08/%E4%BA%BA%E6%80%A7%E8%AF%AF%E5%88%A4%E5%BF%83%E7%90%86%E5%AD%A6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -631,8 +832,8 @@ https://www.ssllabs.com/ssltest/analyze.html?d=www.example.com&latest
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ssl/">
-                                    <span class="chip bg-color">ssl</span>
+                                <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/">
+                                    <span class="chip bg-color">心理学</span>
                                 </a>
                             
                         </div>
@@ -804,66 +1005,18 @@ https://www.ssllabs.com/ssltest/analyze.html?d=www.example.com&latest
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/04/08/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%BB%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/">
+                <a href="/2021/04/08/%E4%BA%BA%E6%80%A7%E8%AF%AF%E5%88%A4%E5%BF%83%E7%90%86%E5%AD%A6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="关于网络的一些概念">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="人性误判心理学">
                         
-                        <span class="card-title">关于网络的一些概念</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-08
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">网络</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/04/08/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D-%E5%85%8D%E8%B4%B9CDN/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="免费域名+免费CDN">
-                        
-                        <span class="card-title">免费域名+免费CDN</span>
+                        <span class="card-title">人性误判心理学</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -880,8 +1033,58 @@ https://www.ssllabs.com/ssltest/analyze.html?d=www.example.com&latest
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/cdn/" class="post-category">
-                                    cdn
+                            <a href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6/" class="post-category">
+                                    心理学
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/">
+                        <span class="chip bg-color">心理学</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/08/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%951/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="数据结构与算法1">
+                        
+                        <span class="card-title">数据结构与算法1</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
                                 </a>
                             
                             
@@ -891,12 +1094,8 @@ https://www.ssllabs.com/ssltest/analyze.html?d=www.example.com&latest
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/cloudflare/">
-                        <span class="chip bg-color">cloudflare</span>
-                    </a>
-                    
-                    <a href="/tags/freenom/">
-                        <span class="chip bg-color">freenom</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">数据结构与算法</span>
                     </a>
                     
                 </div>

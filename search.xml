@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Centos7下构建lamp环境</title>
+      <link href="2021/04/08/Centos7%E4%B8%8B%E6%9E%84%E5%BB%BAlamp%E7%8E%AF%E5%A2%83/"/>
+      <url>2021/04/08/Centos7%E4%B8%8B%E6%9E%84%E5%BB%BAlamp%E7%8E%AF%E5%A2%83/</url>
+      
+        <content type="html"><![CDATA[<h3 id="临时关闭selinux"><a href="#临时关闭selinux" class="headerlink" title="临时关闭selinux"></a>临时关闭selinux</h3><pre class=" language-shell"><code class="language-shell">#查看selinux是否开启getenforce#关闭selinuxsetenforce 0</code></pre><h3 id="安装Apache"><a href="#安装Apache" class="headerlink" title="安装Apache"></a>安装Apache</h3><pre class=" language-sh"><code class="language-sh">#输入y，同意安装yum install httpd #启动 apachesystemctl start httpd.service #设置apache开机启动systemctl enable httpd.service </code></pre><h3 id="修改防火墙规则"><a href="#修改防火墙规则" class="headerlink" title="修改防火墙规则"></a>修改防火墙规则</h3><pre class=" language-shell"><code class="language-shell">#允许外界访问80端口firewall-cmd --add-port=80/tcp</code></pre><h3 id="安装MariaDB"><a href="#安装MariaDB" class="headerlink" title="安装MariaDB"></a>安装MariaDB</h3><pre class=" language-shell"><code class="language-shell">#输入y同意安装yum install mariadb mariadb-server#启动MariaDBsystemctl start mariadb.service #设置开机启动systemctl enable mariadb.service </code></pre><h3 id="修改MySQL密码"><a href="#修改MySQL密码" class="headerlink" title="修改MySQL密码"></a>修改MySQL密码</h3><pre class=" language-shell"><code class="language-shell">#通过mysql，连接数据库mysql#切换数据库use mysql;#修改mysql密码set password for 'root'@'localhost'=password('输入你的密码');#如果需要mysql授权远程连接，请使用如下命令授予权限grant all on *.* to root identified by 'root';#关闭数据库连接exit</code></pre><h3 id="安装PHP以及组件"><a href="#安装PHP以及组件" class="headerlink" title="安装PHP以及组件"></a>安装PHP以及组件</h3><pre class=" language-shell"><code class="language-shell">#默认的yum源无法升级PHP，并且通过默认的yum源安装的是低版本的php；我们需要安装其他高版本的php时，需要添加第三方yum源rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpmrpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm#安装php7.1，提示输入y确认安装yum install -y php71w-fpm php71w-opcache php71w-cli php71w-gd php71w-imap php71w-mysqlnd php71w-mbstring php71w-mcrypt php71w-pdo php71w-pecl-apcu php71w-pecl-mongodb php71w-pecl-redis php71w-pgsql php71w-xml php71w-xmlrpc php71w-devel mod_php71w#查看当前php版本php -v</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

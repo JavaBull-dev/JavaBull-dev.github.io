@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="maven的配置, 分享技术">
+    <meta name="keywords" content="Centos7下安装python3, 分享技术">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>maven的配置 | 风儿吹 羊儿肥的博客</title>
+    <title>Centos7下安装python3 | 风儿吹 羊儿肥的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">maven的配置</h1>
+                    <h1 class="description center-align post-title">Centos7下安装python3</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/maven/">
-                                <span class="chip bg-color">maven</span>
+                            <a href="/tags/python3/">
+                                <span class="chip bg-color">python3</span>
+                            </a>
+                        
+                            <a href="/tags/centos7/">
+                                <span class="chip bg-color">centos7</span>
                             </a>
                         
                     </div>
@@ -443,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="post-category">
-                                项目构建工具
+                            <a href="/categories/python3/" class="post-category">
+                                python3
                             </a>
                         
                     </div>
@@ -456,7 +460,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-21
+                    2021-04-29
                 </div>
                 
 
@@ -477,406 +481,28 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="maven是什么"><a href="#maven是什么" class="headerlink" title="maven是什么"></a>maven是什么</h3><p><strong>Apache Maven</strong>，是一个<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6">软件</a>（特别是<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Java_(%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80)">Java</a>软件）<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86">项目管理</a>及<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA">自动构建</a>工具，基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，由<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Apache%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A">Apache软件基金会</a>所提供。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven也可被用于构建和管理各种项目，例如<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/C%E2%99%AF">C#</a>，<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Ruby">Ruby</a>，<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Scala">Scala</a>和其他语言编写的项目。Maven曾是<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Jakarta%E9%A1%B9%E7%9B%AE">Jakarta项目</a>的子项目，现为由<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Apache%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A">Apache软件基金会</a>主持的独立Apache项目。</p>
-<h3 id="maven能干什么"><a href="#maven能干什么" class="headerlink" title="maven能干什么"></a>maven能干什么</h3><p>能够帮助开发人员节省繁琐的项目构建，使开发人员能够更加的专注业务的开发。</p>
-<ul>
-<li>构建</li>
-<li>文档生成</li>
-<li>报告</li>
-<li>依赖</li>
-<li>SCMs</li>
-<li>发布</li>
-<li>分发</li>
-<li>邮件列表</li>
-</ul>
-<h3 id="maven配置"><a href="#maven配置" class="headerlink" title="maven配置"></a>maven配置</h3><h4 id="maven的下载"><a href="#maven的下载" class="headerlink" title="maven的下载"></a>maven的下载</h4><p>访问 <a target="_blank" rel="noopener" href="https://maven.apache.org/">Apache Maven</a>，点击download</p>
-<p><img src="/image/2021-04-21_132008.png"></p>
-<p>下载对应的版本，这里以windows版本为例，下载 apache-maven-3.8.1-bin.zip</p>
-<p><img src="/image/2021-04-21_132037.png"></p>
-<p>解压后找到maven的conf目录，进入conf目录，使用记事本打开setting.xml文件，setting.xml原始的内容如下</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
-
-<span class="token comment" spellcheck="true">&lt;!--
-Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
-distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
-to you under the Apache License, Version 2.0 (the
-"License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations
-under the License.
---></span>
-
-<span class="token comment" spellcheck="true">&lt;!--
- | This is the configuration file for Maven. It can be specified at two levels:
- |
- |  1. User Level. This settings.xml file provides configuration for a single user,
- |                 and is normally provided in $&amp;#123;user.home&amp;#125;/.m2/settings.xml.
- |
- |                 NOTE: This location can be overridden with the CLI option:
- |
- |                 -s /path/to/user/settings.xml
- |
- |  2. Global Level. This settings.xml file provides configuration for all Maven
- |                 users on a machine (assuming they're all using the same Maven
- |                 installation). It's normally provided in
- |                 $&amp;#123;maven.home&amp;#125;/conf/settings.xml.
- |
- |                 NOTE: This location can be overridden with the CLI option:
- |
- |                 -gs /path/to/global/settings.xml
- |
- | The sections in this sample file are intended to give you a running start at
- | getting the most out of your Maven installation. Where appropriate, the default
- | values (values used when the setting is not specified) are provided.
- |
- |--></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>settings</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maven.apache.org/SETTINGS/1.0.0<span class="token punctuation">"</span></span>
-          <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
-          <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token comment" spellcheck="true">&lt;!-- localRepository
-   | The path to the local repository maven will use to store artifacts.
-   |
-   | Default: $&amp;#123;user.home&amp;#125;/.m2/repository
-  &lt;localRepository>/path/to/local/repo&lt;/localRepository>
-  --></span>
-
-  <span class="token comment" spellcheck="true">&lt;!-- interactiveMode
-   | This will determine whether maven prompts you when it needs input. If set to false,
-   | maven will use a sensible default value, perhaps based on some other setting, for
-   | the parameter in question.
-   |
-   | Default: true
-  &lt;interactiveMode>true&lt;/interactiveMode>
-  --></span>
-
-  <span class="token comment" spellcheck="true">&lt;!-- offline
-   | Determines whether maven should attempt to connect to the network when executing a build.
-   | This will have an effect on artifact downloads, artifact deployment, and others.
-   |
-   | Default: false
-  &lt;offline>false&lt;/offline>
-  --></span>
-
-  <span class="token comment" spellcheck="true">&lt;!-- pluginGroups
-   | This is a list of additional group identifiers that will be searched when resolving plugins by their prefix, i.e.
-   | when invoking a command line like "mvn prefix:goal". Maven will automatically add the group identifiers
-   | "org.apache.maven.plugins" and "org.codehaus.mojo" if these are not already contained in the list.
-   |--></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginGroups</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!-- pluginGroup
-     | Specifies a further group identifier to use for plugin lookup.
-    &lt;pluginGroup>com.your.plugins&lt;/pluginGroup>
-    --></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginGroups</span><span class="token punctuation">></span></span>
-
-  <span class="token comment" spellcheck="true">&lt;!-- proxies
-   | This is a list of proxies which can be used on this machine to connect to the network.
-   | Unless otherwise specified (by system property or command-line switch), the first proxy
-   | specification in this list marked as active will be used.
-   |--></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>proxies</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!-- proxy
-     | Specification for one proxy, to be used in connecting to the network.
-     |
-    &lt;proxy>
-      &lt;id>optional&lt;/id>
-      &lt;active>true&lt;/active>
-      &lt;protocol>http&lt;/protocol>
-      &lt;username>proxyuser&lt;/username>
-      &lt;password>proxypass&lt;/password>
-      &lt;host>proxy.host.net&lt;/host>
-      &lt;port>80&lt;/port>
-      &lt;nonProxyHosts>local.net|some.host.com&lt;/nonProxyHosts>
-    &lt;/proxy>
-    --></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>proxies</span><span class="token punctuation">></span></span>
-
-  <span class="token comment" spellcheck="true">&lt;!-- servers
-   | This is a list of authentication profiles, keyed by the server-id used within the system.
-   | Authentication profiles can be used whenever maven must make a connection to a remote server.
-   |--></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servers</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!-- server
-     | Specifies the authentication information to use when connecting to a particular server, identified by
-     | a unique name within the system (referred to by the 'id' attribute below).
-     |
-     | NOTE: You should either specify username/password OR privateKey/passphrase, since these pairings are
-     |       used together.
-     |
-    &lt;server>
-      &lt;id>deploymentRepo&lt;/id>
-      &lt;username>repouser&lt;/username>
-      &lt;password>repopwd&lt;/password>
-    &lt;/server>
-    --></span>
-
-    <span class="token comment" spellcheck="true">&lt;!-- Another sample, using keys to authenticate.
-    &lt;server>
-      &lt;id>siteServer&lt;/id>
-      &lt;privateKey>/path/to/private/key&lt;/privateKey>
-      &lt;passphrase>optional; leave empty if not used.&lt;/passphrase>
-    &lt;/server>
-    --></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servers</span><span class="token punctuation">></span></span>
-
-  <span class="token comment" spellcheck="true">&lt;!-- mirrors
-   | This is a list of mirrors to be used in downloading artifacts from remote repositories.
-   |
-   | It works like this: a POM may declare a repository to use in resolving certain artifacts.
-   | However, this repository may have problems with heavy traffic at times, so people have mirrored
-   | it to several places.
-   |
-   | That repository definition will have a unique id, so we can create a mirror reference for that
-   | repository, to be used as an alternate download site. The mirror site will be the preferred
-   | server for that repository.
-   |--></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrors</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!-- mirror
-     | Specifies a repository mirror site to use instead of a given repository. The repository that
-     | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used
-     | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.
-     |
-    &lt;mirror>
-      &lt;id>mirrorId&lt;/id>
-      &lt;mirrorOf>repositoryId&lt;/mirrorOf>
-      &lt;name>Human Readable Name for this Mirror.&lt;/name>
-      &lt;url>http://my.repository.com/repo/path&lt;/url>
-    &lt;/mirror>
-     --></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrors</span><span class="token punctuation">></span></span>
-
-  <span class="token comment" spellcheck="true">&lt;!-- profiles
-   | This is a list of profiles which can be activated in a variety of ways, and which can modify
-   | the build process. Profiles provided in the settings.xml are intended to provide local machine-
-   | specific paths and repository locations which allow the build to work in the local environment.
-   |
-   | For example, if you have an integration testing plugin - like cactus - that needs to know where
-   | your Tomcat instance is installed, you can provide a variable here such that the variable is
-   | dereferenced during the build process to configure the cactus plugin.
-   |
-   | As noted above, profiles can be activated in a variety of ways. One way - the activeProfiles
-   | section of this document (settings.xml) - will be discussed later. Another way essentially
-   | relies on the detection of a system property, either matching a particular value for the property,
-   | or merely testing its existence. Profiles can also be activated by JDK version prefix, where a
-   | value of '1.4' might activate a profile when the build is executed on a JDK version of '1.4.2_07'.
-   | Finally, the list of active profiles can be specified directly from the command line.
-   |
-   | NOTE: For profiles defined in the settings.xml, you are restricted to specifying only artifact
-   |       repositories, plugin repositories, and free-form properties to be used as configuration
-   |       variables for plugins in the POM.
-   |
-   |--></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profiles</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!-- profile
-     | Specifies a set of introductions to the build process, to be activated using one or more of the
-     | mechanisms described above. For inheritance purposes, and to activate profiles via &lt;activatedProfiles/>
-     | or the command line, profiles have to have an ID that is unique.
-     |
-     | An encouraged best practice for profile identification is to use a consistent naming convention
-     | for profiles, such as 'env-dev', 'env-test', 'env-production', 'user-jdcasey', 'user-brett', etc.
-     | This will make it more intuitive to understand what the set of introduced profiles is attempting
-     | to accomplish, particularly when you only have a list of profile id's for debug.
-     |
-     | This profile example uses the JDK version to trigger activation, and provides a JDK-specific repo.
-    &lt;profile>
-      &lt;id>jdk-1.4&lt;/id>
-
-      &lt;activation>
-        &lt;jdk>1.4&lt;/jdk>
-      &lt;/activation>
-
-      &lt;repositories>
-        &lt;repository>
-          &lt;id>jdk14&lt;/id>
-          &lt;name>Repository for JDK 1.4 builds&lt;/name>
-          &lt;url>http://www.myhost.com/maven/jdk14&lt;/url>
-          &lt;layout>default&lt;/layout>
-          &lt;snapshotPolicy>always&lt;/snapshotPolicy>
-        &lt;/repository>
-      &lt;/repositories>
-    &lt;/profile>
-    --></span>
-
-    <span class="token comment" spellcheck="true">&lt;!--
-     | Here is another profile, activated by the system property 'target-env' with a value of 'dev',
-     | which provides a specific path to the Tomcat instance. To use this, your plugin configuration
-     | might hypothetically look like:
-     |
-     | ...
-     | &lt;plugin>
-     |   &lt;groupId>org.myco.myplugins&lt;/groupId>
-     |   &lt;artifactId>myplugin&lt;/artifactId>
-     |
-     |   &lt;configuration>
-     |     &lt;tomcatLocation>$&amp;#123;tomcatPath&amp;#125;&lt;/tomcatLocation>
-     |   &lt;/configuration>
-     | &lt;/plugin>
-     | ...
-     |
-     | NOTE: If you just wanted to inject this configuration whenever someone set 'target-env' to
-     |       anything, you could just leave off the &lt;value/> inside the activation-property.
-     |
-    &lt;profile>
-      &lt;id>env-dev&lt;/id>
-
-      &lt;activation>
-        &lt;property>
-          &lt;name>target-env&lt;/name>
-          &lt;value>dev&lt;/value>
-        &lt;/property>
-      &lt;/activation>
-
-      &lt;properties>
-        &lt;tomcatPath>/path/to/tomcat/instance&lt;/tomcatPath>
-      &lt;/properties>
-    &lt;/profile>
-    --></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>profiles</span><span class="token punctuation">></span></span>
-
-  <span class="token comment" spellcheck="true">&lt;!-- activeProfiles
-   | List of profiles that are active for all builds.
-   |
-  &lt;activeProfiles>
-    &lt;activeProfile>alwaysActiveProfile&lt;/activeProfile>
-    &lt;activeProfile>anotherAlwaysActiveProfile&lt;/activeProfile>
-  &lt;/activeProfiles>
-  --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>settings</span><span class="token punctuation">></span></span>
+                <h3 id="安装编译-Python3的相关包"><a href="#安装编译-Python3的相关包" class="headerlink" title="安装编译 Python3的相关包"></a>安装编译 Python3的相关包</h3><pre class=" language-shell"><code class="language-shell">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel
 </code></pre>
-<h4 id="maven中央仓库的mirrors"><a href="#maven中央仓库的mirrors" class="headerlink" title="maven中央仓库的mirrors"></a>maven中央仓库的mirrors</h4><p>由于从国外的maven中央仓库下载jar比较慢，所以需要配置maven的mirrors，使用国内阿里云的mirror</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrors</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!-- mirror
-     | Specifies a repository mirror site to use instead of a given repository. The repository that
-     | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used
-     | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.
-     |
-    &lt;mirror>
-      &lt;id>mirrorId&lt;/id>
-      &lt;mirrorOf>repositoryId&lt;/mirrorOf>
-      &lt;name>Human Readable Name for this Mirror.&lt;/name>
-      &lt;url>http://my.repository.com/repo/path&lt;/url>
-    &lt;/mirror>
-    配置maven 中央仓库
-     --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirror</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>alimaven<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>aliyun maven<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>http://maven.aliyun.com/nexus/content/groups/public/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrorOf</span><span class="token punctuation">></span></span>central<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrorOf</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirror</span><span class="token punctuation">></span></span>
-
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirror</span><span class="token punctuation">></span></span>  
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>jboss<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>  
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>jboss<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>  
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>https://repository.jboss.org/nexus/content/repositories/releases/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span>  
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrorOf</span><span class="token punctuation">></span></span>JBoss Releases<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrorOf</span><span class="token punctuation">></span></span>        
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirror</span><span class="token punctuation">></span></span>   
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrors</span><span class="token punctuation">></span></span>
+<h3 id="安装pip"><a href="#安装pip" class="headerlink" title="安装pip"></a>安装pip</h3><pre class=" language-shell"><code class="language-shell"> yum install python-pip
 </code></pre>
-<h4 id="配置maven使用的jdk"><a href="#配置maven使用的jdk" class="headerlink" title="配置maven使用的jdk"></a>配置maven使用的jdk</h4><p>再配置maven使用的jdk版本，这里我配置的是jdk1.8，依据你使用的jdk版本而定</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profiles</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!-- profile
-     | Specifies a set of introductions to the build process, to be activated using one or more of the
-     | mechanisms described above. For inheritance purposes, and to activate profiles via &lt;activatedProfiles/>
-     | or the command line, profiles have to have an ID that is unique.
-     |
-     | An encouraged best practice for profile identification is to use a consistent naming convention
-     | for profiles, such as 'env-dev', 'env-test', 'env-production', 'user-jdcasey', 'user-brett', etc.
-     | This will make it more intuitive to understand what the set of introduced profiles is attempting
-     | to accomplish, particularly when you only have a list of profile id's for debug.
-     |
-     | This profile example uses the JDK version to trigger activation, and provides a JDK-specific repo.
-    &lt;profile>
-      &lt;id>jdk-1.4&lt;/id>
-
-      &lt;activation>
-        &lt;jdk>1.4&lt;/jdk>
-      &lt;/activation>
-
-      &lt;repositories>
-        &lt;repository>
-          &lt;id>jdk14&lt;/id>
-          &lt;name>Repository for JDK 1.4 builds&lt;/name>
-          &lt;url>http://www.myhost.com/maven/jdk14&lt;/url>
-          &lt;layout>default&lt;/layout>
-          &lt;snapshotPolicy>always&lt;/snapshotPolicy>
-        &lt;/repository>
-      &lt;/repositories>
-    &lt;/profile>
-    --></span>
-    <span class="token comment" spellcheck="true">&lt;!-- 此处配置jdk的版本--></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profile</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>jdk1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activation</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activeByDefault</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activeByDefault</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jdk</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>jdk</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activation</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven.compiler.source</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maven.compiler.source</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven.compiler.target</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maven.compiler.target</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven.compiler.compilerVersion</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maven.compiler.compilerVersion</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>profile</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!--
-     | Here is another profile, activated by the system property 'target-env' with a value of 'dev',
-     | which provides a specific path to the Tomcat instance. To use this, your plugin configuration
-     | might hypothetically look like:
-     |
-     | ...
-     | &lt;plugin>
-     |   &lt;groupId>org.myco.myplugins&lt;/groupId>
-     |   &lt;artifactId>myplugin&lt;/artifactId>
-     |
-     |   &lt;configuration>
-     |     &lt;tomcatLocation>$&amp;#123;tomcatPath&amp;#125;&lt;/tomcatLocation>
-     |   &lt;/configuration>
-     | &lt;/plugin>
-     | ...
-     |
-     | NOTE: If you just wanted to inject this configuration whenever someone set 'target-env' to
-     |       anything, you could just leave off the &lt;value/> inside the activation-property.
-     |
-    &lt;profile>
-      &lt;id>env-dev&lt;/id>
-
-      &lt;activation>
-        &lt;property>
-          &lt;name>target-env&lt;/name>
-          &lt;value>dev&lt;/value>
-        &lt;/property>
-      &lt;/activation>
-
-      &lt;properties>
-        &lt;tomcatPath>/path/to/tomcat/instance&lt;/tomcatPath>
-      &lt;/properties>
-    &lt;/profile>
-    --></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>profiles</span><span class="token punctuation">></span></span>
+<h3 id="安装-wget"><a href="#安装-wget" class="headerlink" title="安装 wget"></a>安装 wget</h3><pre class=" language-shell"><code class="language-shell">pip install wget
 </code></pre>
-<h4 id="本地仓库目录的配置"><a href="#本地仓库目录的配置" class="headerlink" title="本地仓库目录的配置"></a>本地仓库目录的配置</h4><p>还有一个需要配置的地方是本地的jar包库（本地仓库），如果不做配置，默认会下载到%HOMEPATH%/.m2/depository/目录下；</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>settings</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maven.apache.org/SETTINGS/1.0.0<span class="token punctuation">"</span></span>
-          <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
-          <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token comment" spellcheck="true">&lt;!-- localRepository
-   | The path to the local repository maven will use to store artifacts.
-   |
-   | Default: $&amp;#123;user.home&amp;#125;/.m2/repository
-  &lt;localRepository>/path/to/local/repo&lt;/localRepository>
-
-    此处配置文件路径
-  --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>localRepository</span><span class="token punctuation">></span></span>D:\Depository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>localRepository</span><span class="token punctuation">></span></span>
+<h3 id="通过wget下载-python3-7的源码包"><a href="#通过wget下载-python3-7的源码包" class="headerlink" title="通过wget下载 python3.7的源码包"></a>通过wget下载 python3.7的源码包</h3><pre class=" language-shell"><code class="language-shell">wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
 </code></pre>
-<p>如果我们还需要再命令行使用maven，则需要再系统环境变量的%PATH%下添加maven的目录，当然，我们最好是将maven的配置文件复制到%HOMEPATH%/.m2/目录下。</p>
+<h3 id="编译安装python3-7"><a href="#编译安装python3-7" class="headerlink" title="编译安装python3.7"></a>编译安装python3.7</h3><pre class=" language-shell"><code class="language-shell">tar -zxvf Python-3.7.0.tgz
+
+#编译 安装
+./configure prefix=/usr/local/python3 
+make && make install
+
+#添加软连接，命令行下输入python3 可使用
+ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
+ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
+</code></pre>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><pre class=" language-shell"><code class="language-shell">#安装成功
+[root@shell python3]# python3 -V
+Python 3.7.0
+</code></pre>
 
                 
             </div>
@@ -903,7 +529,7 @@ under the License.
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.ljpc.ga/2021/04/21/maven%E7%9A%84%E9%85%8D%E7%BD%AE/">https://www.ljpc.ga/2021/04/21/maven%E7%9A%84%E9%85%8D%E7%BD%AE/</a>
+                    <a href="https://www.ljpc.ga/2021/04/29/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python3/">https://www.ljpc.ga/2021/04/29/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -941,8 +567,12 @@ under the License.
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/maven/">
-                                    <span class="chip bg-color">maven</span>
+                                <a href="/tags/python3/">
+                                    <span class="chip bg-color">python3</span>
+                                </a>
+                            
+                                <a href="/tags/centos7/">
+                                    <span class="chip bg-color">centos7</span>
                                 </a>
                             
                         </div>
@@ -1114,9 +744,10 @@ under the License.
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/29/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python3/">
                     <div class="card-image">
@@ -1134,9 +765,9 @@ under the License.
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1149,6 +780,7 @@ under the License.
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1171,13 +803,13 @@ under the License.
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/08/%E5%BE%AE%E8%A1%A8%E6%83%85/">
+                <a href="/2021/04/21/maven%E7%9A%84%E9%85%8D%E7%BD%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="微表情">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="maven的配置">
                         
-                        <span class="card-title">微表情</span>
+                        <span class="card-title">maven的配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1188,14 +820,14 @@ under the License.
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BE%AE%E8%A1%A8%E6%83%85/" class="post-category">
-                                    微表情
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    项目构建工具
                                 </a>
                             
                             
@@ -1205,8 +837,8 @@ under the License.
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BE%AE%E8%A1%A8%E6%83%85/">
-                        <span class="chip bg-color">微表情</span>
+                    <a href="/tags/maven/">
+                        <span class="chip bg-color">maven</span>
                     </a>
                     
                 </div>

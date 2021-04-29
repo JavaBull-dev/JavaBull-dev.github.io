@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Centos7下安装python3</title>
+      <link href="2021/04/29/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python3/"/>
+      <url>2021/04/29/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85python3/</url>
+      
+        <content type="html"><![CDATA[<h3 id="安装编译-Python3的相关包"><a href="#安装编译-Python3的相关包" class="headerlink" title="安装编译 Python3的相关包"></a>安装编译 Python3的相关包</h3><pre class=" language-shell"><code class="language-shell">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel</code></pre><h3 id="安装pip"><a href="#安装pip" class="headerlink" title="安装pip"></a>安装pip</h3><pre class=" language-shell"><code class="language-shell"> yum install python-pip</code></pre><h3 id="安装-wget"><a href="#安装-wget" class="headerlink" title="安装 wget"></a>安装 wget</h3><pre class=" language-shell"><code class="language-shell">pip install wget</code></pre><h3 id="通过wget下载-python3-7的源码包"><a href="#通过wget下载-python3-7的源码包" class="headerlink" title="通过wget下载 python3.7的源码包"></a>通过wget下载 python3.7的源码包</h3><pre class=" language-shell"><code class="language-shell">wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz</code></pre><h3 id="编译安装python3-7"><a href="#编译安装python3-7" class="headerlink" title="编译安装python3.7"></a>编译安装python3.7</h3><pre class=" language-shell"><code class="language-shell">tar -zxvf Python-3.7.0.tgz#编译 安装./configure prefix=/usr/local/python3 make && make install#添加软连接，命令行下输入python3 可使用ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3</code></pre><h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><pre class=" language-shell"><code class="language-shell">#安装成功[root@shell python3]# python3 -VPython 3.7.0</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python3 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python3 </tag>
+            
+            <tag> centos7 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>maven的配置</title>
       <link href="2021/04/21/maven%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
       <url>2021/04/21/maven%E7%9A%84%E9%85%8D%E7%BD%AE/</url>
